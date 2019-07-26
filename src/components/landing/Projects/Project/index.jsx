@@ -4,13 +4,7 @@ import { Card, SocialLink, ImageSubtitle } from 'Common'
 import { faLink } from '@fortawesome/free-solid-svg-icons'
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
 
-import {
-  Title,
-  TextContainer,
-  ImageContainer,
-  ProjectTag,
-  CARD_HEIGHT,
-} from './styles'
+import { Title, TextContainer, ImageContainer, CARD_HEIGHT } from './styles'
 
 export const Project = ({
   name,
@@ -20,7 +14,7 @@ export const Project = ({
   type,
 }) => (
   <Card p={0}>
-    <Flex style={{ height: CARD_HEIGHT }}>
+    <Flex flexDirection="column" style={{ height: CARD_HEIGHT }}>
       <TextContainer>
         <span>
           <Title my={2} pb={1}>
@@ -33,13 +27,8 @@ export const Project = ({
       </TextContainer>
 
       <ImageContainer>
-        {/* <ProjectImage src={logo.image.src} alt={logo.title} /> */}
-        <ProjectTag>
-          <Flex
-            style={{
-              float: 'right',
-            }}
-          >
+        <ImageSubtitle y="bottom" x="left">
+          <Flex>
             {repositoryUrl ? (
               <Box mx={2} fontSize={5}>
                 <SocialLink
@@ -51,7 +40,7 @@ export const Project = ({
             ) : (
               <div />
             )}
-            {repositoryUrl ? (
+            {projectUrl ? (
               <Box mx={2} fontSize={5}>
                 <SocialLink
                   name="See project"
@@ -63,10 +52,10 @@ export const Project = ({
               <div />
             )}
           </Flex>
-          <ImageSubtitle bg="#6b63ff" color="white" y="bottom" x="right" round>
-            {type}
-          </ImageSubtitle>
-        </ProjectTag>
+        </ImageSubtitle>
+        <ImageSubtitle bg="#6b63ff" color="white" y="bottom" x="right" round>
+          {type}
+        </ImageSubtitle>
       </ImageContainer>
     </Flex>
   </Card>

@@ -17,15 +17,14 @@ export const TextContainer = styled.div`
   display: flex;
   flex-direction: column;
   padding: 10px;
-  width: 100%;
-  width: calc(100% - ${CARD_HEIGHT} / 2);
   ${MEDIA_QUERY_SMALL} {
     width: calc(100% - (${CARD_HEIGHT} / 2));
   }
 `
 
 export const ImageContainer = styled.div`
-  margin: auto;
+  display: flex;
+  flex-direction: column;
   width: ${CARD_HEIGHT};
   ${MEDIA_QUERY_SMALL} {
     width: calc(${CARD_HEIGHT} / 2);
@@ -42,14 +41,5 @@ export const ProjectImage = styled(Image)`
     width: calc(${CARD_HEIGHT} / 2);
     margin-top: calc(${CARD_HEIGHT} / 4);
     padding: 10px;
-  }
-`
-export const ProjectTag = styled.div`
-  height: ${CARD_HEIGHT};
-  top: calc(
-    -${CARD_HEIGHT} - 3.5px
-  ); /*don't know why I have to add 3.5px here ... */
-  ${MEDIA_QUERY_SMALL} {
-    top: calc(-${CARD_HEIGHT} - 3.5px + (${CARD_HEIGHT} / 4));
   }
 `
