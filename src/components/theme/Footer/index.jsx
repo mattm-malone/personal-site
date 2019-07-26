@@ -1,7 +1,8 @@
 import React from 'react'
-import { Container } from 'Common'
+import { Container, SocialLink } from 'Common'
+import { Box } from 'rebass'
 import { Wrapper, Flex, Links, Details } from './styles'
-import social from './social.json'
+import { SocialMediaLinks } from './social'
 
 export const Footer = () => (
   <Wrapper>
@@ -14,16 +15,10 @@ export const Footer = () => (
         </span>
       </Details>
       <Links>
-        {social.map(({ id, name, link, icon }) => (
-          <a
-            key={id}
-            href={link}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label={`follow me on ${icon}`}
-          >
-            <img width="24" src={icon} alt={name} />
-          </a>
+        {SocialMediaLinks.map(({ name, link, icon }) => (
+          <Box mx={0} fontSize={4}>
+            <SocialLink name={name} fontAwesomeIcon={icon} url={link} />
+          </Box>
         ))}
       </Links>
     </Flex>

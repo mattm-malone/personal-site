@@ -1,7 +1,7 @@
 import React from 'react'
 import Fade from 'react-reveal/Fade'
 import { Container } from 'Common'
-import { Wrapper, Grid, Item, Content } from './styles'
+import { Wrapper, Grid } from './styles'
 import { Project } from './Project'
 import projects from './projects.json'
 
