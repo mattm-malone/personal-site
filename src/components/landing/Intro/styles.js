@@ -9,13 +9,22 @@ export const Wrapper = styled.div`
 `
 
 export const IntroWrapper = styled.div`
-	padding: 4rem 0;
+	padding: 3rem 0;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 
 	@media (max-width: 960px) {
 		flex-direction: column;
+	}
+`
+
+export const Links = styled.div`
+	display: flex;
+	align-items: center;
+	margin: 2rem 0 0 2rem;
+	a {
+		margin: 0 0.5rem;
 	}
 `
 
@@ -28,7 +37,7 @@ export const Details = styled.div`
 	}
 
 	h1 {
-		margin-bottom: 2rem;
+		margin-bottom: 1rem;
 		font-size: 36pt;
 		color: #212121;
 
@@ -38,7 +47,8 @@ export const Details = styled.div`
 	}
 
 	h4 {
-		margin-bottom: 2.5rem;
+		margin-bottom: 1.5rem;
+		margin-left: 2rem;
 		font-size: 32pt;
 		font-weight: normal;
 		color: #707070;

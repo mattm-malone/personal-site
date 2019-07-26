@@ -1,0 +1,36 @@
+[
+  {
+    "name": "Make it Fresh",
+    "description": "MERN Stack application for finding, saving and managing new recipes. Utilizes Edamam API and recipe database.",
+    "repositoryUrl": "https://github.com/mattm-malone/recipe-generator",
+    "projectUrl": "tbd",
+    "type": "Web"
+  },
+  {
+    "name": "Movie Genre Classifier",
+    "description": "Neural network to predict movie genres from title. Trained from trimmed IMDB database, using Keras and TensorFlow.",
+    "repositoryUrl": "https://github.com/mattm-malone/moviename-classifier",
+    "projectUrl": "movie-predict",
+    "type": "Deep Learning/Web"
+  },
+  {
+    "name": "This Website!",
+    "description": "Lorep sum",
+    "repositoryUrl": "https://github.com/mattm-malone/personal-site",
+    "type": "Web"
+  },
+  {
+    "name": "Advanced Protect",
+    "description": "Car maintenance hub with interactive instructions and health status on tires, oil, etc. Personalized to make, model and annual mileage. Created in React, uses GMaps and CarMD APIs.",
+    "repositoryUrl": "",
+    "projectUrl": "",
+    "type": "Web"
+  },
+  {
+    "name": "New Legs",
+    "description": "Streamlined IT Ticketing system for Level 1 IT Support agents at Liberty Mutual. Created with Angular 5 and Java Spring back-end",
+    "repositoryUrl": "",
+    "projectUrl": "",
+    "type": "Web"
+  }
+]
