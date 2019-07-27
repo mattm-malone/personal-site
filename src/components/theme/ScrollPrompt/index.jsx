@@ -32,7 +32,7 @@ const ScrollAnimation = keyframes`
 `
 
 const Mouse = styled.rect.attrs(() => ({
-  stroke: '#6b63ff',
+  stroke: '#4285f4',
   strokeWidth: '3',
 }))``
 
@@ -43,7 +43,7 @@ const Scroll = styled.circle`
   animation-iteration-count: infinite;
   transform-origin: 50% 20.5px;
   will-change: transform;
-  fill: #6b63ff;
+  fill: #4285f4;
 `
 
 export const MouseIcon = () => (

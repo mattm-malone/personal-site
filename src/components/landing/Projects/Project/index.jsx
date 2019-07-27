@@ -53,7 +53,7 @@ export const Project = ({
             )}
           </Flex>
         </ImageSubtitle>
-        <ImageSubtitle bg="#6b63ff" color="white" y="bottom" x="right" round>
+        <ImageSubtitle bg="#4285f4" color="white" y="bottom" x="right" round>
           {type}
         </ImageSubtitle>
       </ImageContainer>

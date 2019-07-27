@@ -10,7 +10,7 @@ export const Title = styled(Text)`
   font-weight: 600;
   text-transform: uppercase;
   display: table;
-  border-bottom: #6b63ff 5px solid;
+  border-bottom: #4285f4 5px solid;
 `
 
 export const TextContainer = styled.div`

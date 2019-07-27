@@ -31,9 +31,9 @@ export const Links = styled.div`
 
 export const IconLink = styled(AnchorLink)`
   transition: color 0.5s;
-  color: #6b63ff;
+  color: #4285f4;
   &:hover {
-    color: #928cff;
+    color: #6da2f8;
   }
 `
 
