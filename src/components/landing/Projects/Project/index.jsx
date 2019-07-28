@@ -1,7 +1,7 @@
 import React from 'react'
 import { Text, Flex, Box } from 'rebass'
 import { Card, SocialLink, ImageSubtitle } from 'Common'
-import { faLink } from '@fortawesome/free-solid-svg-icons'
+import { faGlobeAmericas } from '@fortawesome/free-solid-svg-icons'
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
 
 import { Title, TextContainer, ImageContainer, CARD_HEIGHT } from './styles'
@@ -44,7 +44,7 @@ export const Project = ({
               <Box mx={2} fontSize={5}>
                 <SocialLink
                   name="See project"
-                  fontAwesomeIcon={faLink}
+                  fontAwesomeIcon={faGlobeAmericas}
                   url={projectUrl}
                 />
               </Box>

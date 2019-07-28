@@ -22,7 +22,8 @@ export const Intro = () => (
     <IntroWrapper as={Container}>
       <Details>
         <h1>&lt;Intro&gt;</h1>
-        <h4>I’m Matt and I'm an aspiring Software Engineer</h4>
+        <h4>Hi, I'm Matt Malone.</h4>
+        <h4>I'm a software engineer.</h4>
         <h1>&lt;/Intro&gt;</h1>
         <Links>
           {SocialMediaLinks.map(({ name, link, icon }) => (
@@ -38,7 +39,7 @@ export const Intro = () => (
         </Links>
       </Details>
       <Thumbnail>
-        <img src={code} alt="I’m Matt and I'm an aspiring Software Engineer" />
+        <img src={code} alt="Intro" />
       </Thumbnail>
     </IntroWrapper>
   </Wrapper>

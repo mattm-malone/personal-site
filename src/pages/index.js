@@ -11,6 +11,10 @@ export default () => (
     <AnchorLink href="#about">
       <MouseIcon />
     </AnchorLink>
+    <br />
+    <br />
+    <br />
+    <br />
     <Skills />
     <Projects />
     <Contact />

@@ -61,13 +61,13 @@ export class MoviePredict extends Component {
             </div>
           </InputField>
         </PageWrapper>
-        <Wrapper>
-          <div style={this.state.loading ? {} : { display: 'none' }}>
+        <Flex alignItems="center" justifyContent="center">
+          <div style={this.state.loading ? {} : { visibility: 'hidden' }}>
             <Fade big key={0}>
               <PulseLoader color={'#4285f4'} />
             </Fade>
           </div>
-        </Wrapper>
+        </Flex>
         <Wrapper ref={this.myRef}>
           {this.state.showResults ? (
             <>

@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { BarChart, Label, Legend, Bar, XAxis, YAxis, Tooltip } from 'recharts'
+import { BarChart, Legend, Bar, XAxis, YAxis, Tooltip } from 'recharts'
 
 export const Results = props => (
   <BarChart
