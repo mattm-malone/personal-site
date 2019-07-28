@@ -1,8 +1,10 @@
 import React, { Component } from 'react'
 import Fade from 'react-reveal/Fade'
-import { Flex } from 'rebass'
+import { Box } from 'rebass'
 import { Container } from 'Common'
 import { TitleInput } from './Input'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons'
 import { Results } from './Results'
 import { Wrapper, InputField, StyledButton, PageWrapper } from './styles'
 import { getPrediction } from './TensorFlow'
@@ -30,13 +32,6 @@ export class MoviePredict extends Component {
     return this.results.slice(0, 3)
   }
 
-  getHeight = () => {
-    if (this.state.showMore) {
-      return 200
-    }
-    return 500
-  }
-
   render() {
     return (
       <Container as={Container}>
@@ -55,24 +50,27 @@ export class MoviePredict extends Component {
           </InputField>
         </PageWrapper>
         <Wrapper>
-          <Flex>
-            <Fade delay={200} big key={1}>
-              {this.state.showResults ? (
-                <>
-                  <Results data={this.dataToShow()} height={this.getHeight()} />
-                  <button
+          <Fade delay={200} big key={1}>
+            {this.state.showResults ? (
+              <>
+                <Results data={this.dataToShow()} />
+                <Box fontSize={3}>
+                  <a
                     onClick={() =>
                       this.setState({ showMore: !this.state.showMore })
                     }
                   >
+                    <FontAwesomeIcon
+                      icon={this.state.showMore ? faChevronUp : faChevronDown}
+                    />{' '}
                     Show All
-                  </button>
-                </>
-              ) : (
-                <div />
-              )}
-            </Fade>
-          </Flex>
+                  </a>
+                </Box>
+              </>
+            ) : (
+              <div />
+            )}
+          </Fade>
         </Wrapper>
       </Container>
     )
