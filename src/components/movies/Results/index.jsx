@@ -1,6 +1,6 @@
-import React, { Component } from 'react'
+import React from 'react'
 
-import { BarChart, Bar, XAxis, YAxis, Tooltip } from 'recharts'
+import { BarChart, Label, Legend, Bar, XAxis, YAxis, Tooltip } from 'recharts'
 
 export const Results = props => (
   <BarChart
@@ -9,9 +9,10 @@ export const Results = props => (
     data={props.data}
     layout="vertical"
   >
-    <XAxis type="number" />
+    <Legend />
+    <XAxis type="number" domain={[0, 100]} />
     <Tooltip wrapperStyle={{ backgroundColor: '#ccc' }} />
-    <YAxis dataKey="genre" type="category" />
-    <Bar dataKey="pred" fill="#1580cb" />
+    <YAxis dataKey="Genre" type="category" />
+    <Bar dataKey="Confidence" fill="#1580cb"></Bar>
   </BarChart>
 )

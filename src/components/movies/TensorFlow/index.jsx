@@ -47,18 +47,18 @@ const prediction_to_probabilities = prediction => {
   let label_pred = []
   for (let i = 0; i < prediction.length; i++) {
     let pred = {}
-    pred['genre'] = labels[i]
-    pred['pred'] = prediction[i]
+    pred['Genre'] = labels[i]
+    pred['Confidence'] = prediction[i]
     label_pred.push(pred)
   }
-  label_pred = label_pred.sort((a, b) => a.pred - b.pred).reverse()
+  label_pred = label_pred.sort((a, b) => a.Confidence - b.Confidence).reverse()
   return label_pred
 }
 
 const formatPredictions = predictions => {
   const preds = predictions
   for (let k in preds) {
-    preds[k].pred = (predictions[k].pred * 100).toFixed(2)
+    preds[k].Confidence = (predictions[k].Confidence * 100).toFixed(2)
   }
   return preds
 }
