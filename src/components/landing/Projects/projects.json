@@ -1,37 +1,37 @@
 [
   {
     "name": "Make it Fresh",
-    "description": "MERN Stack application for finding, saving and managing new recipes. Utilizes Edamam API and recipe database.",
+    "description": "Find, save and manage new recipes. Simply input ingredients lying around and get smart suggestions. MERN stack application utilizing Edamam API and recipe database.",
     "repositoryUrl": "https://github.com/mattm-malone/recipe-generator",
-    "projectUrl": "tbd",
+    "projectUrl": "",
     "type": "Web"
   },
   {
     "name": "Movie Genre Classifier",
-    "description": "Neural network to predict movie genres from title. Trained from trimmed IMDB database, using Keras and TensorFlow.",
+    "description": "Neural network to predict what genres a movie is based on its title. Trained from trimmed IMDB database, using Keras and TensorFlow. Try it out!",
     "repositoryUrl": "https://github.com/mattm-malone/moviename-classifier",
-    "projectUrl": "movie-predict",
-    "type": "Deep Learning/Web"
+    "projectUrl": "/movies",
+    "type": "Machine Learning/Web"
   },
   {
     "name": "This Website!",
-    "description": "Lorep sum",
+    "description": "Responsive, fast and minimal static PWA made with GatsbyJS and React. Uses modern styled components, Formspree powered forms, and hosted on Github Pages.",
     "repositoryUrl": "https://github.com/mattm-malone/personal-site",
     "projectUrl": "",
     "type": "Web"
   },
   {
     "name": "Advanced Protect",
-    "description": "Car maintenance hub with interactive instructions and health status on tires, oil, etc. Personalized to make, model and annual mileage. Created in React, uses GMaps and CarMD APIs.",
+    "description": "Car maintenance hub with interactive instructions and health status on tires, oil, etc. Personalized to make, model and annual mileage. Created in React, utilizing Google Maps and CarMD APIs.",
     "repositoryUrl": "",
     "projectUrl": "",
-    "type": "Web"
+    "type": "Web/Hackathon"
   },
   {
     "name": "New Legs",
-    "description": "Streamlined IT Ticketing system for Level 1 IT Support agents at Liberty Mutual. Created with Angular 5 and Java Spring back-end",
+    "description": "Streamlined IT Ticketing system for Level 1 IT Support agents. One page application with simple and easy to use interface. Created with Angular 5 and Java Spring backend",
     "repositoryUrl": "",
     "projectUrl": "",
-    "type": "Web"
+    "type": "Web/Hackathon"
   }
 ]

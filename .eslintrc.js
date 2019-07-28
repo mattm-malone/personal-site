@@ -34,6 +34,7 @@ module.exports = {
     'react/jsx-one-expression-per-line': 0,
     'react/jsx-first-prop-new-line': 0,
     'react/jsx-indent-props': 0,
+    'react/destructuring-assignment': ['never'],
     'import/no-extraneous-dependencies': 0,
     'object-curly-newline': 0,
     'no-restricted-globals': 0,
