@@ -52,6 +52,7 @@ export class MoviePredict extends Component {
             <TitleInput onChange={this.handleChange} title={this.state.title} />
             <div style={{ textAlign: 'center' }}>
               <StyledButton
+                ref={this.myRef}
                 onClick={() => {
                   this.handleClick()
                 }}
@@ -68,7 +69,7 @@ export class MoviePredict extends Component {
             </Fade>
           </div>
         </Flex>
-        <Wrapper ref={this.myRef}>
+        <Wrapper>
           {this.state.showResults ? (
             <>
               <Fade delay={100} bottom key={1}>

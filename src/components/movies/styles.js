@@ -27,7 +27,7 @@ export const Wrapper = styled.div`
 export const InputField = styled.div`
   position: relative;
   margin-bottom: 1rem;
-  width: 40rem;
+  width: 65%;
   align-items: center;
 `
 

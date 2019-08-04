@@ -16,7 +16,7 @@ export const Footer = () => (
       </Details>
       <Links>
         {SocialMediaLinks.map(({ name, link, icon }) => (
-          <Box mx={0} fontSize={4}>
+          <Box mx={0} fontSize={5}>
             <SocialLink name={name} fontAwesomeIcon={icon} url={link} />
           </Box>
         ))}
