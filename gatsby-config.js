@@ -7,6 +7,7 @@ require('dotenv').config({
 
 module.exports = {
   siteMetadata: {
+    siteUrl: config.url,
     title: config.defaultTitle,
     description: config.defaultDescription,
     author: config.author,
