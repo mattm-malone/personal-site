@@ -44,7 +44,7 @@ export const SEO = ({
     <Helmet>
       <meta name="description" content={description} />
       <meta name="image" content={Thumbnail} />
-
+      <meta name="msvalidate.01" content="20E7C5847C45CE8904CD7825135A6888" />
       <meta
         property="og:url"
         content={`${url}${location}/?ref=mattmalone.dev`}
