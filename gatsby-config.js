@@ -43,13 +43,6 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        // replace "UA-XXXXXXXXX-X" with your own Tracking ID
-        trackingId: 'UA-145041835-1',
-      },
-    },
-    {
       resolve: 'gatsby-plugin-google-analytics',
       options: {
         trackingId: config.googleAnalyticsID,
@@ -59,7 +52,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-favicon',
       options: {
-        logo: './static/favicon/favicon.png',
+        logo: './static/favicon/favicon_new.png',
         injectHTML: true,
         icons: {
           android: true,
@@ -83,7 +76,7 @@ module.exports = {
         background_color: config.backgroundColor,
         theme_color: config.themeColor,
         display: 'minimal-ui',
-        icon: './static/favicon/favicon.png',
+        icon: './static/favicon/favicon_new.png',
       },
     },
     'gatsby-plugin-offline',

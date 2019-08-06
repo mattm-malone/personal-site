@@ -4,10 +4,8 @@ import Thumbnail from 'Static/thumbnail/thumbnail.png'
 import {
   url,
   defaultDescription,
-  social,
   defaultTitle,
   socialLinks,
-  address,
   contact,
   legalName,
   foundingDate,
@@ -36,13 +34,6 @@ export const SEO = ({
 			"telephone": "${contact.phone}",
 			"contactType": "customer service"
 		}],
-		"address": {
-			"@type": "PostalAddress",
-			"addressLocality": "${address.city}",
-			"addressRegion": "${address.region}",
-			"addressCountry": "${address.country}",
-			"postalCode": "${address.zipCode}"
-		},
 		"sameAs": [
 			"${socialLinks.linkedin}",
 			"${socialLinks.github}"
@@ -54,7 +45,10 @@ export const SEO = ({
       <meta name="description" content={description} />
       <meta name="image" content={Thumbnail} />
 
-      <meta property="og:url" content={`${url}${location}/?ref=mattmalone.dev`} />
+      <meta
+        property="og:url"
+        content={`${url}${location}/?ref=mattmalone.dev`}
+      />
       <meta property="og:type" content="website" />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
