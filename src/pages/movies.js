@@ -5,7 +5,7 @@ import Navbar from '../components/theme/Header/NavBarPure'
 
 export default () => (
   <Layout>
-    <SEO />
+    <SEO title="Matt Malone - Movie-Genre Predictor" />
     <Navbar />
     <MoviePredict />
   </Layout>
