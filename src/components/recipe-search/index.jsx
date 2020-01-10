@@ -4,6 +4,7 @@ import Fade from 'react-reveal/Fade'
 import { Box, Flex } from 'rebass'
 import { Container } from 'Common'
 import { IngredientInput } from './Input'
+import RecipeMasonry from './Masonry'
 import { Wrapper, InputField, StyledButton, PageWrapper } from './styles'
 
 export class RecipeSearch extends Component {
@@ -13,21 +14,63 @@ export class RecipeSearch extends Component {
       ingredients: '',
       loading: false,
       showResults: false,
+      // results: [],
+      results: [
+        {
+          id: 0,
+          title: 'hi',
+          img:
+            'https://images.pexels.com/photos/247685/pexels-photo-247685.png',
+          date: '10-10-1000',
+          description: 'fud',
+        },
+      ],
     }
-    this.results = []
     this.myRef = React.createRef()
   }
 
   handleChange = e => this.setState({ ingredients: e.target.value })
 
+  createRecipe(newRecipe) {
+    const newRecipes = this.state.results.slice()
+    newRecipe.caloriesPerServing = Math.round(
+      newRecipe.caloriesPerServing / newRecipe.numberOfServings
+    )
+    newRecipe.id = newRecipe.caloriesPerServing
+    newRecipes.push(newRecipe)
+    this.setState({ results: newRecipes })
+  }
+
   handleClick = () => {
-    this.setState({ loading: true })
-    // getPrediction(this.state.ingredients).then(response => {
-    //   this.results = response
-    //   this.setState({ showResults: true, loading: false })
-    //   this.scrollToMyRef()
-    // })
-    this.setState({ showResults: true, loading: false })
+    this.setState({ loading: true, results: [] })
+    // this.scrollToMyRef()
+    const query = encodeURI(this.state.value)
+    fetch(
+      `https://api.edamam.com/search?q=${query}&app_id=2e98039e&app_key=68a92e2d6de1a6d18e6fc3499f1aa18d`
+    )
+      .then(resp => resp.json())
+      .then(resp => {
+        if (resp.count) {
+          resp.hits.forEach(hit => {
+            this.createRecipe({
+              title: hit.recipe.label,
+              source: hit.recipe.source,
+              numberOfServings: hit.recipe.yield,
+              img: hit.recipe.image,
+              sourceRecipeURL: hit.recipe.url,
+              totalTime: hit.recipe.totalTime,
+              caloriesPerServing: hit.recipe.calories,
+              ingredients: hit.recipe.ingredientLines,
+            })
+          })
+        }
+      })
+      .then(() => {
+        this.setState({ loading: false, showResults: true })
+      })
+      .catch(function(err) {
+        console.log('Fetch Error :-S', err)
+      })
   }
 
   render() {
@@ -46,7 +89,7 @@ export class RecipeSearch extends Component {
                   this.handleClick()
                 }}
               >
-                Predict
+                Search
               </StyledButton>
             </div>
           </InputField>
@@ -60,11 +103,7 @@ export class RecipeSearch extends Component {
         </Flex>
         <Wrapper>
           {this.state.showResults ? (
-            <>
-              <Fade delay={100} bottom key={1}>
-                <h3>Temp</h3>
-              </Fade>
-            </>
+            <RecipeMasonry elements={this.state.results} />
           ) : (
             <div />
           )}
