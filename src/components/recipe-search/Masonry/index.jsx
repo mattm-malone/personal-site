@@ -1,36 +1,33 @@
 import React from 'react'
-import Masonry from 'react-masonry-component'
+import Columns from 'react-columns'
+import Fade from 'react-reveal/Fade'
 import Card from '../Card'
 
-const masonryOptions = {
-  transitionDuration: 0,
-}
+export const RecipeMasonry = props => {
+  const queries = [
+    {
+      columns: 4,
+      query: 'min-width: 500px',
+    },
+    {
+      columns: 5,
+      query: 'min-width: 1000px',
+    },
+  ]
 
-const imagesLoadedOptions = { background: '.my-bg-image-el' }
-
-class RecipeMasonry extends React.Component {
-  render() {
-    const childElements = this.props.elements.map(element => (
+  const childElements = props.elements.map(element => (
+    <Fade bottom delay={element.key * 150}>
       <Card
-        src={element.img}
+        img={element.img}
         title={element.title}
         date={element.date}
         description={element.description}
       />
-    ))
-
-    return (
-      <Masonry
-        className={'my-gallery-class'} // default ''
-        options={masonryOptions} // default {}
-        disableImagesLoaded={false} // default false
-        updateOnEachImageLoad={false} // default false and works only if disableImagesLoaded is false
-        imagesLoadedOptions={imagesLoadedOptions} // default {}
-      >
-        {childElements}
-      </Masonry>
-    )
-  }
+    </Fade>
+  ))
+  return (
+    <Columns gap="10px" queries={queries}>
+      {childElements}
+    </Columns>
+  )
 }
-
-export default RecipeMasonry

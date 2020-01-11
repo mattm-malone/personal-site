@@ -19,9 +19,8 @@ const Card = ({ title, date, img, description }) => (
 export default Card
 
 // Recipe.propTypes = {
-//   id: PropTypes.number.isRequired,
-//   name: PropTypes.string.isRequired,
-//   imageURL: PropTypes.string.isRequired,
+//   name: PropTypes.string.isRequired, <
+//   imageURL: PropTypes.string.isRequired, <
 //   source: PropTypes.string.isRequired,
 //   numberOfServings: PropTypes.number.isRequired,
 //   sourceRecipeURL: PropTypes.string.isRequired,

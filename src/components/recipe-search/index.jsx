@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
 import PulseLoader from 'react-spinners/PulseLoader'
 import Fade from 'react-reveal/Fade'
-import { Box, Flex } from 'rebass'
+import { Flex } from 'rebass'
 import { Container } from 'Common'
 import { IngredientInput } from './Input'
-import RecipeMasonry from './Masonry'
+import { RecipeMasonry } from './Masonry'
 import { Wrapper, InputField, StyledButton, PageWrapper } from './styles'
 
 export class RecipeSearch extends Component {
@@ -14,17 +14,9 @@ export class RecipeSearch extends Component {
       ingredients: '',
       loading: false,
       showResults: false,
-      // results: [],
-      results: [
-        {
-          id: 0,
-          title: 'hi',
-          img:
-            'https://images.pexels.com/photos/247685/pexels-photo-247685.png',
-          date: '10-10-1000',
-          description: 'fud',
-        },
-      ],
+      results: [],
+      start: 0,
+      length: 20,
     }
     this.myRef = React.createRef()
   }
@@ -36,7 +28,7 @@ export class RecipeSearch extends Component {
     newRecipe.caloriesPerServing = Math.round(
       newRecipe.caloriesPerServing / newRecipe.numberOfServings
     )
-    newRecipe.id = newRecipe.caloriesPerServing
+    newRecipe.key = newRecipes.length
     newRecipes.push(newRecipe)
     this.setState({ results: newRecipes })
   }
@@ -46,11 +38,14 @@ export class RecipeSearch extends Component {
     // this.scrollToMyRef()
     const query = encodeURI(this.state.value)
     fetch(
-      `https://api.edamam.com/search?q=${query}&app_id=2e98039e&app_key=68a92e2d6de1a6d18e6fc3499f1aa18d`
+      `https://api.edamam.com/search?q=${query}&app_id=2e98039e&app_key=68a92e2d6de1a6d18e6fc3499f1aa18d&from=${
+        this.state.start
+      }&to=${this.state.start + this.state.length}`
     )
       .then(resp => resp.json())
       .then(resp => {
         if (resp.count) {
+          console.log(resp)
           resp.hits.forEach(hit => {
             this.createRecipe({
               title: hit.recipe.label,
