@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import { Container } from 'Common'
-import NavbarLinksPure from '../NavbarLinksPure'
+import NavbarLinksPure from '../NavBarLinksPure'
 import { Wrapper } from './styles'
 
 const NavbarPure = () => (

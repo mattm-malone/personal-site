@@ -62,8 +62,7 @@
     "start": "gatsby develop -o",
     "format": "prettier --write \"src/**/*.js\"",
     "reset": "rm -rf .cache/ public/",
-    "deploy": "gatsby build && gh-pages -r https://github.com/mattm-malone/mattm-malone.github.io -d public -b master",
-    "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\""
+    "deploy": "gatsby build && gh-pages -r https://github.com/mattm-malone/mattm-malone.github.io -d public -b master"
   },
   "devDependencies": {
     "babel-eslint": "^10.0.1",
