@@ -14,20 +14,19 @@ export const Skills = () => (
       </Thumbnail>
       <Details>
         <Fade right delay={200} key={1}>
-          <h1>About</h1>
+          <h1>Who?</h1>
           <p>
-            I'm a senior Computer Science student at UMass Amherst. I have a
-            strong passion for developing responsive and intuitive experiences
-            for a digital world.
+            Currently working at Liberty Mutual as a dev
+            creating modern web experiences.
           </p>
           <p>
-            Through projects, internships, and a love for learning, I have
-            experience in modern web development with React, JavaScript, MERN,
-            and JAM stacks.
+            Through a love for learning and some experience, I have
+            experience in full stack web development with
+            React, GraphQL, Node, and AWS.
           </p>
           <p>
-            When I'm not learning and developing, I enjoy rock climbing,
-            cycling, and videogames.
+            When I'm not learning, working and developing, I enjoy rock climbing,
+            cycling, cooking, and videogames.
           </p>
         </Fade>
       </Details>

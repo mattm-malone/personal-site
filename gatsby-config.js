@@ -16,13 +16,6 @@ module.exports = {
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-styled-components',
     `gatsby-plugin-sitemap`,
-    /* {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        name: 'assets',
-        path: '${__dirname}/src/assets',
-      },
-    }, */
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
     {
@@ -79,6 +72,19 @@ module.exports = {
         theme_color: config.themeColor,
         display: 'minimal-ui',
         icon: './static/favicon/favicon_new.png',
+      },
+    },
+    {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        extensions: [`.mdx`, `.md`],
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `posts`,
+        path: `./src/posts`,
       },
     },
     'gatsby-plugin-offline',
